@@ -1,0 +1,353 @@
+{
+  "success": true,
+  "model_name": "07_Solido_Tetraedrico_PatchTest_3D",
+  "diagnostics": {
+    "is_valid": true,
+    "is_singular": false,
+    "is_mechanism": false,
+    "condition_number": 19.595416304332762,
+    "matrix_rank": 12,
+    "free_dofs": 12,
+    "constrained_dofs": 12,
+    "total_dofs": 48,
+    "zero_energy_modes": 0,
+    "force_residual_norm": 1.6892661477641253e-08,
+    "moment_residual_norm": 8.786079596780802e-09,
+    "equilibrium_satisfied": true,
+    "errors": [],
+    "warnings": []
+  },
+  "nodal_displacements": {
+    "1": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "2": [
+      0.001,
+      1.7229745669996733e-19,
+      6.768828656070146e-20,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "3": [
+      0.001,
+      -0.00029999999999999987,
+      1.2992436150128133e-19,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "4": [
+      0.0,
+      -0.00030000000000000003,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "5": [
+      0.0,
+      0.0,
+      -0.00030000000000000003,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "6": [
+      0.001,
+      2.66933554425645e-19,
+      -0.0002999999999999999,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "7": [
+      0.001,
+      -0.0002999999999999998,
+      -0.00029999999999999987,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "8": [
+      0.0,
+      -0.00030000000000000003,
+      -0.0002999999999999999,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "nodal_reactions": {
+    "1": [
+      -66666666.66666666,
+      -1.1175870895385742e-08,
+      3.725290298461914e-09,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "2": [
+      66666666.66666667,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "3": [
+      33333333.33333333,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "4": [
+      -33333333.33333333,
+      0.0,
+      -9.313225746154785e-10,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "5": [
+      -33333333.33333332,
+      3.725290298461914e-09,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "6": [
+      33333333.33333333,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "7": [
+      66666666.66666665,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "8": [
+      -66666666.66666666,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "element_results": {
+    "1": {
+      "element_id": 1,
+      "element_type": "TETRA_4",
+      "length_or_measure": 0.16666666666666666,
+      "axial_force": 0.0,
+      "shear_y": 0.0,
+      "shear_z": 0.0,
+      "torsion": 0.0,
+      "moment_y": 0.0,
+      "moment_z": 0.0,
+      "axial_stress": 200000000.0,
+      "bending_stress_max": 0.0,
+      "combined_stress": 200000000.0,
+      "von_mises_stress": 200000000.0,
+      "strain_tensor_voigt": [
+        0.001,
+        -0.00030000000000000003,
+        -0.0003,
+        2.168404344971009e-19,
+        1.0842021724855044e-19,
+        0.0
+      ],
+      "stress_tensor_voigt": [
+        200000000.0,
+        0.0,
+        7.450580596923828e-09,
+        1.6680033422853914e-08,
+        8.340016711426957e-09,
+        0.0
+      ],
+      "local_end_forces": []
+    },
+    "2": {
+      "element_id": 2,
+      "element_type": "TETRA_4",
+      "length_or_measure": 0.16666666666666666,
+      "axial_force": 0.0,
+      "shear_y": 0.0,
+      "shear_z": 0.0,
+      "torsion": 0.0,
+      "moment_y": 0.0,
+      "moment_z": 0.0,
+      "axial_stress": 200000000.0,
+      "bending_stress_max": 0.0,
+      "combined_stress": 200000000.0,
+      "von_mises_stress": 200000000.0,
+      "strain_tensor_voigt": [
+        0.001,
+        -0.00030000000000000003,
+        -0.0003,
+        1.6263032587282567e-19,
+        5.421010862427522e-20,
+        2.168404344971009e-19
+      ],
+      "stress_tensor_voigt": [
+        200000000.0,
+        0.0,
+        7.450580596923828e-09,
+        1.2510025067140436e-08,
+        4.170008355713478e-09,
+        1.6680033422853914e-08
+      ],
+      "local_end_forces": []
+    },
+    "3": {
+      "element_id": 3,
+      "element_type": "TETRA_4",
+      "length_or_measure": 0.16666666666666666,
+      "axial_force": 0.0,
+      "shear_y": 0.0,
+      "shear_z": 0.0,
+      "torsion": 0.0,
+      "moment_y": 0.0,
+      "moment_z": 0.0,
+      "axial_stress": 200000000.0,
+      "bending_stress_max": 0.0,
+      "combined_stress": 200000000.0,
+      "von_mises_stress": 200000000.0,
+      "strain_tensor_voigt": [
+        0.001,
+        -0.00030000000000000003,
+        -0.0002999999999999999,
+        2.168404344971009e-19,
+        0.0,
+        5.421010862427522e-20
+      ],
+      "stress_tensor_voigt": [
+        200000000.0,
+        1.4901161193847656e-08,
+        2.2351741790771484e-08,
+        1.6680033422853914e-08,
+        0.0,
+        4.170008355713478e-09
+      ],
+      "local_end_forces": []
+    },
+    "4": {
+      "element_id": 4,
+      "element_type": "TETRA_4",
+      "length_or_measure": 0.16666666666666666,
+      "axial_force": 0.0,
+      "shear_y": 0.0,
+      "shear_z": 0.0,
+      "torsion": 0.0,
+      "moment_y": 0.0,
+      "moment_z": 0.0,
+      "axial_stress": 200000000.0,
+      "bending_stress_max": 0.0,
+      "combined_stress": 200000000.0,
+      "von_mises_stress": 200000000.0,
+      "strain_tensor_voigt": [
+        0.001,
+        -0.00030000000000000003,
+        -0.00030000000000000003,
+        2.168404344971009e-19,
+        1.0842021724855044e-19,
+        5.421010862427522e-20
+      ],
+      "stress_tensor_voigt": [
+        200000000.0,
+        -1.4901161193847656e-08,
+        -7.450580596923828e-09,
+        1.6680033422853914e-08,
+        8.340016711426957e-09,
+        4.170008355713478e-09
+      ],
+      "local_end_forces": []
+    },
+    "5": {
+      "element_id": 5,
+      "element_type": "TETRA_4",
+      "length_or_measure": 0.16666666666666666,
+      "axial_force": 0.0,
+      "shear_y": 0.0,
+      "shear_z": 0.0,
+      "torsion": 0.0,
+      "moment_y": 0.0,
+      "moment_z": 0.0,
+      "axial_stress": 200000000.0,
+      "bending_stress_max": 0.0,
+      "combined_stress": 200000000.0,
+      "von_mises_stress": 200000000.0,
+      "strain_tensor_voigt": [
+        0.001,
+        -0.0003000000000000001,
+        -0.00030000000000000003,
+        2.168404344971009e-19,
+        5.421010862427522e-20,
+        1.0842021724855044e-19
+      ],
+      "stress_tensor_voigt": [
+        200000000.0,
+        -2.9802322387695312e-08,
+        -1.4901161193847656e-08,
+        1.6680033422853914e-08,
+        4.170008355713478e-09,
+        8.340016711426957e-09
+      ],
+      "local_end_forces": []
+    },
+    "6": {
+      "element_id": 6,
+      "element_type": "TETRA_4",
+      "length_or_measure": 0.16666666666666666,
+      "axial_force": 0.0,
+      "shear_y": 0.0,
+      "shear_z": 0.0,
+      "torsion": 0.0,
+      "moment_y": 0.0,
+      "moment_z": 0.0,
+      "axial_stress": 200000000.0,
+      "bending_stress_max": 0.0,
+      "combined_stress": 200000000.0,
+      "von_mises_stress": 200000000.0,
+      "strain_tensor_voigt": [
+        0.001,
+        -0.0003000000000000001,
+        -0.0003,
+        2.168404344971009e-19,
+        1.5851333717709456e-19,
+        0.0
+      ],
+      "stress_tensor_voigt": [
+        200000000.0,
+        -1.4901161193847656e-08,
+        0.0,
+        1.6680033422853914e-08,
+        1.2193333629007273e-08,
+        0.0
+      ],
+      "local_end_forces": []
+    }
+  },
+  "max_displacement": 0.0010862780491200216,
+  "max_von_mises": 200000000.0,
+  "max_axial_stress": 200000000.0,
+  "min_axial_stress": 200000000.0,
+  "recommended_visual_scale": 60.793,
+  "strain_energy": 99999.99999999999,
+  "disclaimer": "ADVERTENCIA TÉCNICA Y LEGAL: Los resultados numéricos obtenidos mediante Structura 3D corresponden a un modelo idealizado bajo hipótesis de elasticidad lineal e infinitesimal. NO son aptos para construcción, diseño ejecutivo ni constituyen certificación estructural."
+}

@@ -1,0 +1,203 @@
+{
+  "name": "04_Viga_Biapoyada_Carga_Distribuida_N4",
+  "description": "Viga simplemente apoyada (L=6m) bajo carga uniforme q=-15 kN/m (4 elementos).",
+  "units": {
+    "length": "m",
+    "force": "N",
+    "stress": "Pa",
+    "moment": "N·m",
+    "density": "kg/m³",
+    "angle": "rad"
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "label": "N1"
+    },
+    {
+      "id": 2,
+      "x": 1.5,
+      "y": 0.0,
+      "z": 0.0,
+      "label": "N2"
+    },
+    {
+      "id": 3,
+      "x": 3.0,
+      "y": 0.0,
+      "z": 0.0,
+      "label": "N3"
+    },
+    {
+      "id": 4,
+      "x": 4.5,
+      "y": 0.0,
+      "z": 0.0,
+      "label": "N4"
+    },
+    {
+      "id": 5,
+      "x": 6.0,
+      "y": 0.0,
+      "z": 0.0,
+      "label": "N5"
+    }
+  ],
+  "materials": [
+    {
+      "id": 1,
+      "name": "Acero S275",
+      "E": 210000000000.0,
+      "nu": 0.3,
+      "rho": 7850.0,
+      "yield_strength": 250000000.0
+    }
+  ],
+  "sections": [
+    {
+      "id": 1,
+      "name": "Viga 200x400 mm",
+      "shape": "RECTANGULAR",
+      "A": 0.08000000000000002,
+      "Iy": 0.00026666666666666673,
+      "Iz": 0.001066666666666667,
+      "J": 0.0007324166666666669,
+      "thickness": 0.01,
+      "dimensions": {
+        "b": 0.2,
+        "h": 0.4
+      }
+    }
+  ],
+  "elements": [
+    {
+      "id": 1,
+      "type": "FRAME_3D",
+      "nodes": [
+        1,
+        2
+      ],
+      "material_id": 1,
+      "section_id": 1,
+      "roll_angle": 0.0,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "type": "FRAME_3D",
+      "nodes": [
+        2,
+        3
+      ],
+      "material_id": 1,
+      "section_id": 1,
+      "roll_angle": 0.0,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "type": "FRAME_3D",
+      "nodes": [
+        3,
+        4
+      ],
+      "material_id": 1,
+      "section_id": 1,
+      "roll_angle": 0.0,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "type": "FRAME_3D",
+      "nodes": [
+        4,
+        5
+      ],
+      "material_id": 1,
+      "section_id": 1,
+      "roll_angle": 0.0,
+      "label": ""
+    }
+  ],
+  "boundary_conditions": [
+    {
+      "node_id": 1,
+      "ux": true,
+      "uy": true,
+      "uz": true,
+      "rx": true,
+      "ry": true,
+      "rz": false,
+      "prescribed_ux": 0.0,
+      "prescribed_uy": 0.0,
+      "prescribed_uz": 0.0,
+      "prescribed_rx": 0.0,
+      "prescribed_ry": 0.0,
+      "prescribed_rz": 0.0,
+      "preset": "PINNED_2D_XY"
+    },
+    {
+      "node_id": 5,
+      "ux": false,
+      "uy": true,
+      "uz": true,
+      "rx": true,
+      "ry": true,
+      "rz": false,
+      "prescribed_ux": 0.0,
+      "prescribed_uy": 0.0,
+      "prescribed_uz": 0.0,
+      "prescribed_rx": 0.0,
+      "prescribed_ry": 0.0,
+      "prescribed_rz": 0.0,
+      "preset": "ROLLER_2D_XY"
+    }
+  ],
+  "nodal_loads": [],
+  "distributed_loads": [
+    {
+      "element_id": 1,
+      "qx": 0.0,
+      "qy": -15000.0,
+      "qz": 0.0,
+      "coordinate_system": "GLOBAL",
+      "label": ""
+    },
+    {
+      "element_id": 2,
+      "qx": 0.0,
+      "qy": -15000.0,
+      "qz": 0.0,
+      "coordinate_system": "GLOBAL",
+      "label": ""
+    },
+    {
+      "element_id": 3,
+      "qx": 0.0,
+      "qy": -15000.0,
+      "qz": 0.0,
+      "coordinate_system": "GLOBAL",
+      "label": ""
+    },
+    {
+      "element_id": 4,
+      "qx": 0.0,
+      "qy": -15000.0,
+      "qz": 0.0,
+      "coordinate_system": "GLOBAL",
+      "label": ""
+    }
+  ],
+  "metadata": {
+    "analytical_solution": {
+      "midspan_uy": -0.0011300223214285713,
+      "max_moment_z": 67500.0,
+      "reaction_Ry_each": 45000.0
+    }
+  },
+  "schema_version": "1.0.0",
+  "disclaimer": "ADVERTENCIA TÉCNICA Y LEGAL: Los resultados numéricos obtenidos mediante Structura 3D corresponden a un modelo idealizado bajo hipótesis de elasticidad lineal e infinitesimal. NO son aptos para construcción, diseño ejecutivo ni constituyen certificación estructural."
+}

@@ -1,0 +1,122 @@
+{
+  "name": "01_Barra_Axial_Referencia",
+  "description": "Barra sometida a tracción uniaxial pura (solución analítica exacta u = PL/EA).",
+  "units": {
+    "length": "m",
+    "force": "N",
+    "stress": "Pa",
+    "moment": "N·m",
+    "density": "kg/m³",
+    "angle": "rad"
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "label": "Apoyo"
+    },
+    {
+      "id": 2,
+      "x": 2.0,
+      "y": 0.0,
+      "z": 0.0,
+      "label": "Extremo Cargado"
+    }
+  ],
+  "materials": [
+    {
+      "id": 1,
+      "name": "Acero Estructural S275",
+      "E": 200000000000.0,
+      "nu": 0.3,
+      "rho": 7850.0,
+      "yield_strength": 275000000.0
+    }
+  ],
+  "sections": [
+    {
+      "id": 1,
+      "name": "Barra Maciza 10 cm²",
+      "shape": "CIRCULAR",
+      "A": 0.001,
+      "Iy": 1e-06,
+      "Iz": 1e-06,
+      "J": 2e-06,
+      "thickness": 0.01,
+      "dimensions": {}
+    }
+  ],
+  "elements": [
+    {
+      "id": 1,
+      "type": "TRUSS_3D",
+      "nodes": [
+        1,
+        2
+      ],
+      "material_id": 1,
+      "section_id": 1,
+      "roll_angle": 0.0,
+      "label": "Barra 1"
+    }
+  ],
+  "boundary_conditions": [
+    {
+      "node_id": 1,
+      "ux": true,
+      "uy": true,
+      "uz": true,
+      "rx": false,
+      "ry": false,
+      "rz": false,
+      "prescribed_ux": 0.0,
+      "prescribed_uy": 0.0,
+      "prescribed_uz": 0.0,
+      "prescribed_rx": 0.0,
+      "prescribed_ry": 0.0,
+      "prescribed_rz": 0.0,
+      "preset": "PINNED_3D"
+    },
+    {
+      "node_id": 2,
+      "ux": false,
+      "uy": true,
+      "uz": true,
+      "rx": false,
+      "ry": false,
+      "rz": false,
+      "prescribed_ux": 0.0,
+      "prescribed_uy": 0.0,
+      "prescribed_uz": 0.0,
+      "prescribed_rx": 0.0,
+      "prescribed_ry": 0.0,
+      "prescribed_rz": 0.0,
+      "preset": "ROLLER_X"
+    }
+  ],
+  "nodal_loads": [
+    {
+      "node_id": 2,
+      "fx": 100000.0,
+      "fy": 0.0,
+      "fz": 0.0,
+      "mx": 0.0,
+      "my": 0.0,
+      "mz": 0.0,
+      "label": "P = 100 kN"
+    }
+  ],
+  "distributed_loads": [],
+  "metadata": {
+    "analytical_solution": {
+      "node_2_ux": 0.001,
+      "element_1_axial_force": 100000.0,
+      "element_1_axial_stress": 100000000.0,
+      "node_1_Rx": -100000.0
+    }
+  },
+  "schema_version": "1.0.0",
+  "disclaimer": "ADVERTENCIA TÉCNICA Y LEGAL: Los resultados numéricos obtenidos mediante Structura 3D corresponden a un modelo idealizado bajo hipótesis de elasticidad lineal e infinitesimal. NO son aptos para construcción, diseño ejecutivo ni constituyen certificación estructural."
+}

@@ -1,0 +1,293 @@
+{
+  "success": true,
+  "model_name": "03_Viga_Voladizo_N4",
+  "diagnostics": {
+    "is_valid": true,
+    "is_singular": false,
+    "is_mechanism": false,
+    "condition_number": 1544.1904879021045,
+    "matrix_rank": 24,
+    "free_dofs": 24,
+    "constrained_dofs": 6,
+    "total_dofs": 30,
+    "zero_energy_modes": 0,
+    "force_residual_norm": 1.0913936421275139e-11,
+    "moment_residual_norm": 5.529727786779404e-10,
+    "equilibrium_satisfied": true,
+    "errors": [],
+    "warnings": []
+  },
+  "nodal_displacements": {
+    "1": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "2": [
+      0.0,
+      -0.0005432098765432141,
+      0.0,
+      0.0,
+      0.0,
+      -0.0010370370370370455
+    ],
+    "3": [
+      0.0,
+      -0.0019753086419753256,
+      0.0,
+      0.0,
+      0.0,
+      -0.0017777777777777946
+    ],
+    "4": [
+      -0.0,
+      -0.004000000000000036,
+      -0.0,
+      -0.0,
+      0.0,
+      -0.0022222222222222426
+    ],
+    "5": [
+      0.0,
+      -0.006320987654321041,
+      0.0,
+      0.0,
+      -0.0,
+      -0.0023703703703703864
+    ]
+  },
+  "nodal_reactions": {
+    "1": [
+      0.0,
+      20000.00000000001,
+      0.0,
+      0.0,
+      0.0,
+      80000.00000000055
+    ],
+    "2": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "3": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "4": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "5": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "element_results": {
+    "1": {
+      "element_id": 1,
+      "element_type": "FRAME_3D",
+      "length_or_measure": 1.0,
+      "axial_force": 0.0,
+      "shear_y": 20000.00000000001,
+      "shear_z": 0.0,
+      "torsion": 0.0,
+      "moment_y": 0.0,
+      "moment_z": 80000.00000000055,
+      "axial_stress": 0.0,
+      "bending_stress_max": 35555555.555555806,
+      "combined_stress": 35555555.555555806,
+      "von_mises_stress": 35555555.555555806,
+      "strain_tensor_voigt": [
+        0.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "stress_tensor_voigt": [
+        35555555.555555806,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_end_forces": [
+        0.0,
+        20000.00000000001,
+        0.0,
+        0.0,
+        0.0,
+        80000.00000000055,
+        0.0,
+        -20000.00000000001,
+        0.0,
+        0.0,
+        0.0,
+        -60000.00000000057
+      ]
+    },
+    "2": {
+      "element_id": 2,
+      "element_type": "FRAME_3D",
+      "length_or_measure": 1.0,
+      "axial_force": 0.0,
+      "shear_y": 20000.0,
+      "shear_z": 0.0,
+      "torsion": 0.0,
+      "moment_y": 0.0,
+      "moment_z": 60000.000000000524,
+      "axial_stress": 0.0,
+      "bending_stress_max": 26666666.666666906,
+      "combined_stress": 26666666.666666906,
+      "von_mises_stress": 26666666.666666906,
+      "strain_tensor_voigt": [
+        0.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "stress_tensor_voigt": [
+        26666666.666666906,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_end_forces": [
+        0.0,
+        20000.0,
+        0.0,
+        0.0,
+        0.0,
+        60000.000000000524,
+        0.0,
+        -20000.0,
+        0.0,
+        0.0,
+        0.0,
+        -40000.00000000058
+      ]
+    },
+    "3": {
+      "element_id": 3,
+      "element_type": "FRAME_3D",
+      "length_or_measure": 1.0,
+      "axial_force": 0.0,
+      "shear_y": 20000.0,
+      "shear_z": 0.0,
+      "torsion": 0.0,
+      "moment_y": 0.0,
+      "moment_z": 40000.0,
+      "axial_stress": 0.0,
+      "bending_stress_max": 17777777.777777784,
+      "combined_stress": 17777777.777777784,
+      "von_mises_stress": 17777777.777777784,
+      "strain_tensor_voigt": [
+        0.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "stress_tensor_voigt": [
+        17777777.777777784,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_end_forces": [
+        0.0,
+        20000.0,
+        0.0,
+        0.0,
+        0.0,
+        40000.0,
+        0.0,
+        -20000.0,
+        0.0,
+        0.0,
+        0.0,
+        -20000.000000000233
+      ]
+    },
+    "4": {
+      "element_id": 4,
+      "element_type": "FRAME_3D",
+      "length_or_measure": 1.0,
+      "axial_force": 0.0,
+      "shear_y": 20000.0,
+      "shear_z": 0.0,
+      "torsion": 0.0,
+      "moment_y": 0.0,
+      "moment_z": 19999.999999999534,
+      "axial_stress": 0.0,
+      "bending_stress_max": 8888888.888888683,
+      "combined_stress": 8888888.888888683,
+      "von_mises_stress": 8888888.888888683,
+      "strain_tensor_voigt": [
+        0.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "stress_tensor_voigt": [
+        8888888.888888683,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_end_forces": [
+        0.0,
+        20000.0,
+        0.0,
+        0.0,
+        0.0,
+        19999.999999999534,
+        0.0,
+        -20000.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "max_displacement": 0.006320987654321041,
+  "max_von_mises": 35555555.555555806,
+  "max_axial_stress": 0.0,
+  "min_axial_stress": 0.0,
+  "recommended_visual_scale": 18.984,
+  "strain_energy": 63.209876543212296,
+  "disclaimer": "ADVERTENCIA TÉCNICA Y LEGAL: Los resultados numéricos obtenidos mediante Structura 3D corresponden a un modelo idealizado bajo hipótesis de elasticidad lineal e infinitesimal. NO son aptos para construcción, diseño ejecutivo ni constituyen certificación estructural."
+}

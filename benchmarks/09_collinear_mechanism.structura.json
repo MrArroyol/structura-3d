@@ -1,0 +1,134 @@
+{
+  "name": "09_Caso_Invalido_Mecanismo_Colineal",
+  "description": "Dos barras articuladas colineales con nudo central inestable (mecanismo cinemático).",
+  "units": {
+    "length": "m",
+    "force": "N",
+    "stress": "Pa",
+    "moment": "N·m",
+    "density": "kg/m³",
+    "angle": "rad"
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "x": 2.0,
+      "y": 0.0,
+      "z": 0.0,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "x": 4.0,
+      "y": 0.0,
+      "z": 0.0,
+      "label": ""
+    }
+  ],
+  "materials": [
+    {
+      "id": 1,
+      "name": "Acero",
+      "E": 200000000000.0,
+      "nu": 0.3,
+      "rho": 7850.0,
+      "yield_strength": 250000000.0
+    }
+  ],
+  "sections": [
+    {
+      "id": 1,
+      "name": "Sección",
+      "shape": "GENERIC",
+      "A": 0.001,
+      "Iy": 1e-05,
+      "Iz": 1e-05,
+      "J": 2e-05,
+      "thickness": 0.01,
+      "dimensions": {}
+    }
+  ],
+  "elements": [
+    {
+      "id": 1,
+      "type": "TRUSS_3D",
+      "nodes": [
+        1,
+        2
+      ],
+      "material_id": 1,
+      "section_id": 1,
+      "roll_angle": 0.0,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "type": "TRUSS_3D",
+      "nodes": [
+        2,
+        3
+      ],
+      "material_id": 1,
+      "section_id": 1,
+      "roll_angle": 0.0,
+      "label": ""
+    }
+  ],
+  "boundary_conditions": [
+    {
+      "node_id": 1,
+      "ux": true,
+      "uy": true,
+      "uz": true,
+      "rx": false,
+      "ry": false,
+      "rz": false,
+      "prescribed_ux": 0.0,
+      "prescribed_uy": 0.0,
+      "prescribed_uz": 0.0,
+      "prescribed_rx": 0.0,
+      "prescribed_ry": 0.0,
+      "prescribed_rz": 0.0,
+      "preset": "PINNED_3D"
+    },
+    {
+      "node_id": 3,
+      "ux": true,
+      "uy": true,
+      "uz": true,
+      "rx": false,
+      "ry": false,
+      "rz": false,
+      "prescribed_ux": 0.0,
+      "prescribed_uy": 0.0,
+      "prescribed_uz": 0.0,
+      "prescribed_rx": 0.0,
+      "prescribed_ry": 0.0,
+      "prescribed_rz": 0.0,
+      "preset": "PINNED_3D"
+    }
+  ],
+  "nodal_loads": [
+    {
+      "node_id": 2,
+      "fx": 0.0,
+      "fy": -5000.0,
+      "fz": 0.0,
+      "mx": 0.0,
+      "my": 0.0,
+      "mz": 0.0,
+      "label": ""
+    }
+  ],
+  "distributed_loads": [],
+  "metadata": {},
+  "schema_version": "1.0.0",
+  "disclaimer": "ADVERTENCIA TÉCNICA Y LEGAL: Los resultados numéricos obtenidos mediante Structura 3D corresponden a un modelo idealizado bajo hipótesis de elasticidad lineal e infinitesimal. NO son aptos para construcción, diseño ejecutivo ni constituyen certificación estructural."
+}

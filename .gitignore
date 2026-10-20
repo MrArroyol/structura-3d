@@ -1,0 +1,20 @@
+# Godot 4+ cache & import files
+.godot/
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Archivos temporales de ejecución del puente SolverBridge
+reports/_active_model.structura.json
+reports/_active_result.result.json
+reports/exported_model.structura.json
+
+# OS files
+.DS_Store
+Thumbs.db

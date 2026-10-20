@@ -1,0 +1,293 @@
+{
+  "success": true,
+  "model_name": "04_Viga_Biapoyada_Carga_Distribuida_N4",
+  "diagnostics": {
+    "is_valid": true,
+    "is_singular": false,
+    "is_mechanism": false,
+    "condition_number": 151.3146023717893,
+    "matrix_rank": 21,
+    "free_dofs": 21,
+    "constrained_dofs": 9,
+    "total_dofs": 30,
+    "zero_energy_modes": 0,
+    "force_residual_norm": 2.3283064365386963e-10,
+    "moment_residual_norm": 1.0477378964424133e-09,
+    "equilibrium_satisfied": true,
+    "errors": [],
+    "warnings": []
+  },
+  "nodal_displacements": {
+    "1": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0006026785714285689
+    ],
+    "2": [
+      0.0,
+      -0.0008051409040178539,
+      0.0,
+      0.0,
+      0.0,
+      -0.0004143415178571413
+    ],
+    "3": [
+      0.0,
+      -0.0011300223214285672,
+      0.0,
+      0.0,
+      0.0,
+      3.140704084919639e-20
+    ],
+    "4": [
+      -0.0,
+      -0.0008051409040178539,
+      0.0,
+      0.0,
+      0.0,
+      0.00041434151785714143
+    ],
+    "5": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.000602678571428569
+    ]
+  },
+  "nodal_reactions": {
+    "1": [
+      0.0,
+      44999.99999999994,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "2": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "3": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "4": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "5": [
+      0.0,
+      44999.999999999825,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "element_results": {
+    "1": {
+      "element_id": 1,
+      "element_type": "FRAME_3D",
+      "length_or_measure": 1.5,
+      "axial_force": 0.0,
+      "shear_y": 44999.99999999994,
+      "shear_z": 0.0,
+      "torsion": 0.0,
+      "moment_y": 0.0,
+      "moment_z": 50624.99999999991,
+      "axial_stress": 0.0,
+      "bending_stress_max": 9492187.499999981,
+      "combined_stress": 9492187.499999981,
+      "von_mises_stress": 9492187.499999981,
+      "strain_tensor_voigt": [
+        0.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "stress_tensor_voigt": [
+        9492187.499999981,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_end_forces": [
+        0.0,
+        44999.99999999994,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -22499.99999999994,
+        0.0,
+        0.0,
+        0.0,
+        50624.99999999974
+      ]
+    },
+    "2": {
+      "element_id": 2,
+      "element_type": "FRAME_3D",
+      "length_or_measure": 1.5,
+      "axial_force": 0.0,
+      "shear_y": 22500.000000000116,
+      "shear_z": 0.0,
+      "torsion": 0.0,
+      "moment_y": 0.0,
+      "moment_z": 67499.99999999983,
+      "axial_stress": 0.0,
+      "bending_stress_max": 12656249.999999965,
+      "combined_stress": 12656249.999999965,
+      "von_mises_stress": 12656249.999999965,
+      "strain_tensor_voigt": [
+        0.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "stress_tensor_voigt": [
+        12656249.999999965,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_end_forces": [
+        0.0,
+        22500.000000000116,
+        0.0,
+        0.0,
+        0.0,
+        -50624.99999999965,
+        0.0,
+        -1.1641532182693481e-10,
+        0.0,
+        0.0,
+        0.0,
+        67499.99999999988
+      ]
+    },
+    "3": {
+      "element_id": 3,
+      "element_type": "FRAME_3D",
+      "length_or_measure": 1.5,
+      "axial_force": 0.0,
+      "shear_y": 22500.000000000116,
+      "shear_z": 0.0,
+      "torsion": 0.0,
+      "moment_y": 0.0,
+      "moment_z": 67499.99999999988,
+      "axial_stress": 0.0,
+      "bending_stress_max": 12656249.999999976,
+      "combined_stress": 12656249.999999976,
+      "von_mises_stress": 12656249.999999976,
+      "strain_tensor_voigt": [
+        0.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "stress_tensor_voigt": [
+        12656249.999999976,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_end_forces": [
+        0.0,
+        -1.1641532182693481e-10,
+        0.0,
+        0.0,
+        0.0,
+        -67499.99999999988,
+        0.0,
+        22500.000000000116,
+        0.0,
+        0.0,
+        0.0,
+        50624.99999999977
+      ]
+    },
+    "4": {
+      "element_id": 4,
+      "element_type": "FRAME_3D",
+      "length_or_measure": 1.5,
+      "axial_force": 0.0,
+      "shear_y": 44999.999999999825,
+      "shear_z": 0.0,
+      "torsion": 0.0,
+      "moment_y": 0.0,
+      "moment_z": 50624.99999999965,
+      "axial_stress": 0.0,
+      "bending_stress_max": 9492187.499999933,
+      "combined_stress": 9492187.499999933,
+      "von_mises_stress": 9492187.499999933,
+      "strain_tensor_voigt": [
+        0.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "stress_tensor_voigt": [
+        9492187.499999933,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_end_forces": [
+        0.0,
+        -22499.999999999825,
+        0.0,
+        0.0,
+        0.0,
+        -50624.99999999965,
+        0.0,
+        44999.999999999825,
+        0.0,
+        0.0,
+        0.0,
+        5.820766091346741e-11
+      ]
+    }
+  },
+  "max_displacement": 0.0011300223214285672,
+  "max_von_mises": 12656249.999999976,
+  "max_axial_stress": 0.0,
+  "min_axial_stress": 0.0,
+  "recommended_visual_scale": 159.289,
+  "strain_energy": 32.52345493861576,
+  "disclaimer": "ADVERTENCIA TÉCNICA Y LEGAL: Los resultados numéricos obtenidos mediante Structura 3D corresponden a un modelo idealizado bajo hipótesis de elasticidad lineal e infinitesimal. NO son aptos para construcción, diseño ejecutivo ni constituyen certificación estructural."
+}

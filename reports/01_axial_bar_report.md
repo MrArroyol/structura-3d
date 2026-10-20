@@ -1,0 +1,74 @@
+# Informe Técnico de Análisis Estructural — 01_Barra_Axial_Referencia
+
+**Fecha de generación:** 2026-10-20 10:26:22  
+**Estado del cálculo:** EXITOSO (Convergente y Estable)
+
+> **AVISO IMPORTANTE (RESTRICCIÓN DE USO):**  
+> ADVERTENCIA TÉCNICA Y LEGAL: Los resultados numéricos obtenidos mediante Structura 3D corresponden a un modelo idealizado bajo hipótesis de elasticidad lineal e infinitesimal. NO son aptos para construcción, diseño ejecutivo ni constituyen certificación estructural.
+
+---
+
+## 1. Descripción del Modelo y Sistema de Unidades
+
+- **Descripción:** Barra sometida a tracción uniaxial pura (solución analítica exacta u = PL/EA).
+- **Nodos totales:** 2
+- **Elementos totales:** 1
+- **Grados de libertad (GDL):** 12 totales (1 activos libres, 5 coaccionados por apoyos)
+- **Sistema de unidades:** Longitud `m`, Fuerza `N`, Tensión `Pa`, Momento `N·m`, Giro `rad`
+
+## 2. Diagnóstico Numérico y Verificación de Equilibrio
+
+| Parámetro de Diagnóstico | Valor | Estado |
+| :--- | :--- | :--- |
+| Validez topológica y constitutiva | `True` | OK |
+| Singularidad / Mecanismo cinemático | `False` / `False` | ESTABLE |
+| Número de condición escalado ($\kappa$) | `1.0000e+00` | Óptimo |
+| Modos de energía nula detectados | `0` | 0 (Correcto) |
+| Residuo global de fuerzas $\|\sum \mathbf{F} + \sum \mathbf{R}\|$ | `0.0000e+00 N` | Equilibrio Exacto |
+| Residuo global de momentos $\|\sum \mathbf{M}_0\|$ | `0.0000e+00 N·m` | Equilibrio Exacto |
+| Energía de deformación elástica ($U$) | `5.000000e+01 J` | Calculado |
+| Escala visual de deformación recomendada | `240.00x` | Identificada |
+
+## 3. Resumen de Valores Extremos
+
+- **Desplazamiento nodal máximo ($\|\mathbf{u}\|_{\max}$):** `1.000000e-03 m` (`1.0000 mm`)
+- **Tensión equivalente de Von Mises máxima ($\sigma_{vm,\max}$):** `1.000000e+08 Pa` (`100.000 MPa`)
+- **Tensión axial máxima de tracción ($\sigma_{x,\max}$):** `1.000000e+08 Pa` (`100.000 MPa`)
+- **Tensión axial mínima / compresión ($\sigma_{x,\min}$):** `1.000000e+08 Pa` (`100.000 MPa`)
+
+## 4. Desplazamientos Nodales Calculados
+
+| Nodo ID | Coord $(x, y, z)$ [m] | $u_x$ [m] | $u_y$ [m] | $u_z$ [m] | $\theta_x$ [rad] | $\theta_y$ [rad] | $\theta_z$ [rad] | $\|\mathbf{u}\|$ [m] |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **1** (Apoyo) | (0.000, 0.000, 0.000) | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` |
+| **2** (Extremo Cargado) | (2.000, 0.000, 0.000) | `1.00000e-03` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `1.00000e-03` |
+
+## 5. Reacciones en los Apoyos
+
+| Nodo ID | $R_x$ [N] | $R_y$ [N] | $R_z$ [N] | $M_x$ [N·m] | $M_y$ [N·m] | $M_z$ [N·m] |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **1** | `-100000.0000` | `0.0000` | `0.0000` | `0.0000` | `0.0000` | `0.0000` |
+| **2** | `0.0000` | `0.0000` | `0.0000` | `0.0000` | `0.0000` | `0.0000` |
+
+## 6. Esfuerzos Internos y Tensiones por Elemento
+
+| Elem ID | Tipo | Conectividad | Medida ($L/A/V$) | Axial $N$ [N] | Cortante $\max(V_y, V_z)$ [N] | Momento $\max(M_y, M_z)$ [N·m] | $\sigma_{axial}$ [MPa] | $\sigma_{VonMises}$ [MPa] |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **1** | `TRUSS_3D` | [1, 2] | `2.0000` | `100000.000` | `0.000` | `0.000` | `100.000` | `100.000` |
+
+## 7. Hipótesis del Modelo, Limitaciones y Modos de Fallo No Analizados
+
+1. **Cinemática Lineal Infinitesimal:** Se asumen pequeños desplazamientos y pequeñas deformaciones ($\|\nabla \mathbf{u}\| \ll 1$). El equilibrio se plantea sobre la configuración indeformada original (teoría de primer orden). No se consideran efectos $P-\Delta$ ni grandes rotaciones.
+2. **Material Elástico Lineal, Homogéneo e Isotrópico:** Se aplica la ley de Hooke generalizada sin plastificación, endurecimiento, fluencia viscosa (creep), daño ni fisuración.
+3. **Formulaciones de Elementos:**
+   - `TRUSS_3D`: Barras biarticuladas con rigidez exclusivamente axial ($EA/L$).
+   - `FRAME_3D`: Vigas de Euler-Bernoulli sin deformación por cortante transversal de Timoshenko ni alabeo torsional restringido (Vlasov).
+   - `TRIANGLE_3D` y `TETRA_4`: Elementos finitos lineales de deformación constante (pueden presentar bloqueo por cortante o rigidez artificial en flexión dominante con mallas gruesas).
+4. **Modos de Fallo NO Analizados:**
+   - Pandeo global por compresión (Euler), pandeo lateral-torsional ni abolladura local de chapas.
+   - Plastificación de secciones, rótulas plásticas ni redistribución no lineal de esfuerzos.
+   - Fallo frágil, fractura, fatiga cíclica, impacto dinámico o resonancia sísmica.
+   - Deslizamiento o rotura de uniones (soldaduras, pernos, placas base) ni interacción suelo-estructura.
+
+---
+*ADVERTENCIA TÉCNICA Y LEGAL: Los resultados numéricos obtenidos mediante Structura 3D corresponden a un modelo idealizado bajo hipótesis de elasticidad lineal e infinitesimal. NO son aptos para construcción, diseño ejecutivo ni constituyen certificación estructural.*

@@ -1,0 +1,110 @@
+{
+  "success": true,
+  "model_name": "01_Barra_Axial_Referencia",
+  "diagnostics": {
+    "is_valid": true,
+    "is_singular": false,
+    "is_mechanism": false,
+    "condition_number": 1.0,
+    "matrix_rank": 1,
+    "free_dofs": 1,
+    "constrained_dofs": 5,
+    "total_dofs": 12,
+    "zero_energy_modes": 0,
+    "force_residual_norm": 0.0,
+    "moment_residual_norm": 0.0,
+    "equilibrium_satisfied": true,
+    "errors": [],
+    "warnings": []
+  },
+  "nodal_displacements": {
+    "1": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "2": [
+      0.001,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "nodal_reactions": {
+    "1": [
+      -100000.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "2": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "element_results": {
+    "1": {
+      "element_id": 1,
+      "element_type": "TRUSS_3D",
+      "length_or_measure": 2.0,
+      "axial_force": 100000.0,
+      "shear_y": 0.0,
+      "shear_z": 0.0,
+      "torsion": 0.0,
+      "moment_y": 0.0,
+      "moment_z": 0.0,
+      "axial_stress": 100000000.0,
+      "bending_stress_max": 0.0,
+      "combined_stress": 100000000.0,
+      "von_mises_stress": 100000000.0,
+      "strain_tensor_voigt": [
+        0.0005,
+        -0.00015,
+        -0.00015,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "stress_tensor_voigt": [
+        100000000.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_end_forces": [
+        -100000.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        100000.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "max_displacement": 0.001,
+  "max_von_mises": 100000000.0,
+  "max_axial_stress": 100000000.0,
+  "min_axial_stress": 100000000.0,
+  "recommended_visual_scale": 240.0,
+  "strain_energy": 50.0,
+  "disclaimer": "ADVERTENCIA TÉCNICA Y LEGAL: Los resultados numéricos obtenidos mediante Structura 3D corresponden a un modelo idealizado bajo hipótesis de elasticidad lineal e infinitesimal. NO son aptos para construcción, diseño ejecutivo ni constituyen certificación estructural."
+}

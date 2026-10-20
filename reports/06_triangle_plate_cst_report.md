@@ -1,0 +1,79 @@
+# Informe Técnico de Análisis Estructural — 06_Placa_Membrana_CST_3D
+
+**Fecha de generación:** 2026-10-20 10:26:22  
+**Estado del cálculo:** EXITOSO (Convergente y Estable)
+
+> **AVISO IMPORTANTE (RESTRICCIÓN DE USO):**  
+> ADVERTENCIA TÉCNICA Y LEGAL: Los resultados numéricos obtenidos mediante Structura 3D corresponden a un modelo idealizado bajo hipótesis de elasticidad lineal e infinitesimal. NO son aptos para construcción, diseño ejecutivo ni constituyen certificación estructural.
+
+---
+
+## 1. Descripción del Modelo y Sistema de Unidades
+
+- **Descripción:** Placa rectangular discretizada en elementos triangulares CST bajo tracción uniaxial (Patch Test).
+- **Nodos totales:** 4
+- **Elementos totales:** 2
+- **Grados de libertad (GDL):** 24 totales (5 activos libres, 7 coaccionados por apoyos)
+- **Sistema de unidades:** Longitud `m`, Fuerza `N`, Tensión `Pa`, Momento `N·m`, Giro `rad`
+
+## 2. Diagnóstico Numérico y Verificación de Equilibrio
+
+| Parámetro de Diagnóstico | Valor | Estado |
+| :--- | :--- | :--- |
+| Validez topológica y constitutiva | `True` | OK |
+| Singularidad / Mecanismo cinemático | `False` / `False` | ESTABLE |
+| Número de condición escalado ($\kappa$) | `5.2470e+01` | Óptimo |
+| Modos de energía nula detectados | `0` | 0 (Correcto) |
+| Residuo global de fuerzas $\|\sum \mathbf{F} + \sum \mathbf{R}\|$ | `6.4292e-10 N` | Equilibrio Exacto |
+| Residuo global de momentos $\|\sum \mathbf{M}_0\|$ | `1.1642e-10 N·m` | Equilibrio Exacto |
+| Energía de deformación elástica ($U$) | `2.500000e+02 J` | Calculado |
+| Escala visual de deformación recomendada | `237.34x` | Identificada |
+
+## 3. Resumen de Valores Extremos
+
+- **Desplazamiento nodal máximo ($\|\mathbf{u}\|_{\max}$):** `5.055937e-04 m` (`0.5056 mm`)
+- **Tensión equivalente de Von Mises máxima ($\sigma_{vm,\max}$):** `5.000000e+07 Pa` (`50.000 MPa`)
+- **Tensión axial máxima de tracción ($\sigma_{x,\max}$):** `5.000000e+07 Pa` (`50.000 MPa`)
+- **Tensión axial mínima / compresión ($\sigma_{x,\min}$):** `5.000000e+07 Pa` (`50.000 MPa`)
+
+## 4. Desplazamientos Nodales Calculados
+
+| Nodo ID | Coord $(x, y, z)$ [m] | $u_x$ [m] | $u_y$ [m] | $u_z$ [m] | $\theta_x$ [rad] | $\theta_y$ [rad] | $\theta_z$ [rad] | $\|\mathbf{u}\|$ [m] |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **1** (Inf-Izq) | (0.000, 0.000, 0.000) | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` |
+| **2** (Inf-Der) | (2.000, 0.000, 0.000) | `5.00000e-04` | `3.11718e-19` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `5.00000e-04` |
+| **3** (Sup-Der) | (2.000, 1.000, 0.000) | `5.00000e-04` | `-7.50000e-05` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `5.05594e-04` |
+| **4** (Sup-Izq) | (0.000, 1.000, 0.000) | `0.00000e+00` | `-7.50000e-05` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `0.00000e+00` | `7.50000e-05` |
+
+## 5. Reacciones en los Apoyos
+
+| Nodo ID | $R_x$ [N] | $R_y$ [N] | $R_z$ [N] | $M_x$ [N·m] | $M_y$ [N·m] | $M_z$ [N·m] |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **1** | `-500000.0000` | `0.0000` | `0.0000` | `0.0000` | `0.0000` | `0.0000` |
+| **2** | `0.0000` | `0.0000` | `0.0000` | `0.0000` | `0.0000` | `0.0000` |
+| **3** | `0.0000` | `0.0000` | `0.0000` | `0.0000` | `0.0000` | `0.0000` |
+| **4** | `-500000.0000` | `0.0000` | `0.0000` | `0.0000` | `0.0000` | `0.0000` |
+
+## 6. Esfuerzos Internos y Tensiones por Elemento
+
+| Elem ID | Tipo | Conectividad | Medida ($L/A/V$) | Axial $N$ [N] | Cortante $\max(V_y, V_z)$ [N] | Momento $\max(M_y, M_z)$ [N·m] | $\sigma_{axial}$ [MPa] | $\sigma_{VonMises}$ [MPa] |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **1** | `TRIANGLE_3D` | [1, 2, 3] | `1.0000` | `0.000` | `0.000` | `0.000` | `50.000` | `50.000` |
+| **2** | `TRIANGLE_3D` | [1, 3, 4] | `1.0000` | `0.000` | `0.000` | `0.000` | `50.000` | `50.000` |
+
+## 7. Hipótesis del Modelo, Limitaciones y Modos de Fallo No Analizados
+
+1. **Cinemática Lineal Infinitesimal:** Se asumen pequeños desplazamientos y pequeñas deformaciones ($\|\nabla \mathbf{u}\| \ll 1$). El equilibrio se plantea sobre la configuración indeformada original (teoría de primer orden). No se consideran efectos $P-\Delta$ ni grandes rotaciones.
+2. **Material Elástico Lineal, Homogéneo e Isotrópico:** Se aplica la ley de Hooke generalizada sin plastificación, endurecimiento, fluencia viscosa (creep), daño ni fisuración.
+3. **Formulaciones de Elementos:**
+   - `TRUSS_3D`: Barras biarticuladas con rigidez exclusivamente axial ($EA/L$).
+   - `FRAME_3D`: Vigas de Euler-Bernoulli sin deformación por cortante transversal de Timoshenko ni alabeo torsional restringido (Vlasov).
+   - `TRIANGLE_3D` y `TETRA_4`: Elementos finitos lineales de deformación constante (pueden presentar bloqueo por cortante o rigidez artificial en flexión dominante con mallas gruesas).
+4. **Modos de Fallo NO Analizados:**
+   - Pandeo global por compresión (Euler), pandeo lateral-torsional ni abolladura local de chapas.
+   - Plastificación de secciones, rótulas plásticas ni redistribución no lineal de esfuerzos.
+   - Fallo frágil, fractura, fatiga cíclica, impacto dinámico o resonancia sísmica.
+   - Deslizamiento o rotura de uniones (soldaduras, pernos, placas base) ni interacción suelo-estructura.
+
+---
+*ADVERTENCIA TÉCNICA Y LEGAL: Los resultados numéricos obtenidos mediante Structura 3D corresponden a un modelo idealizado bajo hipótesis de elasticidad lineal e infinitesimal. NO son aptos para construcción, diseño ejecutivo ni constituyen certificación estructural.*

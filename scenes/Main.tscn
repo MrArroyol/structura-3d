@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://structura3d_main"]
+
+[ext_resource type="Script" path="res://scripts/MainController.gd" id="1_main"]
+
+[node name="Structura3DMain" type="Node3D"]
+script = ExtResource("1_main")
